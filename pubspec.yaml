@@ -1,0 +1,64 @@
+name: news_app_ebs
+description: "App for news"
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+
+dependencies:
+  get: ^4.7.2
+  flutter_svg: ^2.2.0
+  readmore: ^3.0.0
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+
+flutter:
+  assets:
+    - assets/newsimage/biden.png
+    - assets/newsimage/doctors.png
+    - assets/newsimage/food.png
+    - assets/newsimage/football.png
+    - assets/newsimage/medicines.png
+    - assets/newsimage/robot.png
+    - assets/newsimage/trump.png
+    - assets/icons/bbc.png
+    - assets/icons/cnet.png
+    - assets/icons/cnn.png
+    - assets/icons/dailymail.png
+    - assets/icons/time.png
+    - assets/icons/like.png
+    - assets/icons/comments.png
+    - assets/icons/bookmark.png
+
+  fonts:
+    - family: SourceSans3
+
+      fonts:
+        - asset: assets/Source_Sans_3/static/SourceSans3-Black.ttf
+        - asset: assets/Source_Sans_3/static/SourceSans3-Bold.ttf
+          weight: 600
+        - asset: assets/Source_Sans_3/static/SourceSans3-ExtraBold.ttf
+        - asset: assets/Source_Sans_3/static/SourceSans3-Light.ttf
+        - asset: assets/Source_Sans_3/static/SourceSans3-Regular.ttf
+
+    - family: SourceSans3_Bold
+      fonts:
+        - asset: assets/Source_Sans_3/static/SourceSans3-Black.ttf
+
+  uses-material-design: true
+
+
