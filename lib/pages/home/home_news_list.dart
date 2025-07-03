@@ -24,12 +24,13 @@ class _HomeNewsListWidgetState extends State<HomeNewsListWidget> {
           child: HeaderTitleWidget(titleKey: 'News', seeAll: () {}),
         ),
         Container(
-          height: 530,
+          height: 250,
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
           child: widget.news.isNotEmpty
               ? ListView.builder(
                 padding: EdgeInsets.only(left: 16),
-                shrinkWrap: true,
+               shrinkWrap: true,
+                scrollDirection: Axis.vertical,
                 itemCount: widget.news.length,
                 itemBuilder: (context, index) {
                   var itemNews = widget.news[index];
