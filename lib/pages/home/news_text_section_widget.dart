@@ -32,7 +32,7 @@ class NewsTextSectionWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 4.0),
             child: NewsPublisherRowWidget(newsItem: itemNews,),
           ),
-          NewsStatsScetionWidget(itemNews: itemNews),
+          NewsStatsSectionWidget(itemNews: itemNews),
         ],
       ),
     );

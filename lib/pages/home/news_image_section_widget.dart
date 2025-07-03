@@ -9,7 +9,7 @@ class NewsImageSectionWidget extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.only(topLeft: Radius.circular(16), bottomLeft: Radius.circular(16)),
       child: Image(
-        height: 156,
+        height: 160,
         width: 150,
         fit: BoxFit.cover,
         image: AssetImage(imageUrl),

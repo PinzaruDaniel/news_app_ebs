@@ -34,39 +34,13 @@ class _HomeNewsListViewWidgetState extends State<HomeNewsListViewWidget> {
           ),
           /*height: 156,
           width: 358,*/
-          child: Stack(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  NewsImageSectionWidget(imageUrl: widget.itemNews.imageUrl),
-                  NewsTextSectionWidget(itemNews: widget.itemNews),
-                ],
-              ),
-              Positioned(
-                bottom: 12,
-                right: 12,
-                child: InkWell(
-                  focusColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () {
-                    setState(() {
-                      isBookmarked = !isBookmarked;
-                    });
-                  },
-                  child: SizedBox(
-                    width: 26,
-                    height: 26,
-                    child: Image.asset(
-                      isBookmarked ? 'assets/icons/bookmark_filles.png' : 'assets/icons/bookmark.png',
-                      width: 16,
-                      height: 16,
-                    ),
-                  ),
-                ),
-              ),
+              NewsImageSectionWidget(imageUrl: widget.itemNews.imageUrl),
+              NewsTextSectionWidget(itemNews: widget.itemNews),
             ],
+
           ),
         ),
       ),
