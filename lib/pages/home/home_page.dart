@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_app_ebs/controller/news_controller.dart';
-import 'package:news_app_ebs/home/featured_news_list_widget.dart';
-import 'package:news_app_ebs/home/home_news_list.dart';
-import 'package:news_app_ebs/theme/app_text_style.dart';
+
+import 'featured_news_list_widget.dart';
+import 'home_news_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -29,9 +29,11 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+
               Obx(() => FeaturedNewsListWidget(news: newsController.news.value)),
 
               HomeNewsListWidget(news: newsController.news.value),
+
             ],
           ),
         ),

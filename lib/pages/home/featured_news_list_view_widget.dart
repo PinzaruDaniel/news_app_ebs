@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app_ebs/theme/app_colors.dart';
 import 'package:news_app_ebs/theme/app_text_style.dart';
 import 'package:readmore/readmore.dart';
-import '../view/view_models.dart';
+import '../../view/view_models.dart';
 
 class FeaturedNewsViewWidget extends StatefulWidget {
   const FeaturedNewsViewWidget({super.key, required this.itemNews});
@@ -50,7 +50,7 @@ class _FeaturedNewsViewWidgetState extends State<FeaturedNewsViewWidget> {
                       alignment: Alignment.centerLeft,
                       child: ReadMoreText(
                         widget.itemNews.title,
-                        style: AppTextsStyle.featuredTitle,
+                        style: AppTextStyles.bold.copyWith(color: Colors.white),
                         trimMode: TrimMode.Line,
                         trimLines: 1,
                         trimCollapsedText: '   ',
@@ -66,7 +66,7 @@ class _FeaturedNewsViewWidgetState extends State<FeaturedNewsViewWidget> {
                             backgroundColor: AppColors.secondary,
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
                           ),
-                          child: Text('Read Now', style: AppTextsStyle.featuredButton.copyWith()),
+                          child: Text('Read Now', style: AppTextStyles.secondaryButton),
                         ),
                     ),
                   ],

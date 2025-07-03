@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'home/home_page.dart';
+import 'package:news_app_ebs/pages/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());

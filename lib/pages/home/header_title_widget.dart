@@ -21,10 +21,10 @@ class _HeaderTitleWidgetState extends State<HeaderTitleWidget> {
         children: [
           Text(
               widget.titleKey,
-          style: AppTextsStyle.headerTitle),
+          style: AppTextStyles.bold),
           Text(
             'See all',
-            style: AppTextsStyle.headerButton,
+            style: AppTextStyles.primaryButton,
           )
         ],
       ),

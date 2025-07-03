@@ -40,9 +40,11 @@ flutter:
     - assets/icons/cnn.png
     - assets/icons/dailymail.png
     - assets/icons/time.png
+    - assets/icons/usatoday.png
     - assets/icons/like.png
     - assets/icons/comments.png
     - assets/icons/bookmark.png
+    - assets/icons/bookmark_filles.png
 
   fonts:
     - family: SourceSans3
@@ -59,6 +61,9 @@ flutter:
       fonts:
         - asset: assets/Source_Sans_3/static/SourceSans3-Black.ttf
 
+    - family: SourceSans3-Medium
+      fonts:
+        - asset: assets/Source_Sans_3/static/SourceSans3-Medium.ttf
   uses-material-design: true
 
 
