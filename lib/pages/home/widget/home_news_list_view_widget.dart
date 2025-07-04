@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../../view/view_models.dart';
+import '../../../views/view_models.dart';
 import 'header_title_widget.dart';
-import 'home_news_list_view_widget.dart';
+import 'home_news_list_item_widget.dart';
 
 class HomeNewsListWidget extends StatefulWidget {
-  const HomeNewsListWidget({super.key, required this.news});
+  const HomeNewsListWidget({super.key, required this.itemNews});
 
-  final List<NewsViewModel> news;
+  final List<NewsViewModel> itemNews;
 
   @override
   State<HomeNewsListWidget> createState() => _HomeNewsListWidgetState();
@@ -22,16 +22,16 @@ class _HomeNewsListWidgetState extends State<HomeNewsListWidget> {
           padding: const EdgeInsets.only(top: 24.0),
           child: HeaderTitleWidget(titleKey: 'News', seeAll: () {}),
         ),
-        widget.news.isNotEmpty
+        widget.itemNews.isNotEmpty
             ? Expanded(
               child: ListView.builder(
                           padding: EdgeInsets.symmetric(horizontal: 16),
                        //   shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: widget.news.length,
+                          itemCount: widget.itemNews.length,
                           itemBuilder: (context, index) {
-              var itemNews = widget.news[index];
-              return HomeNewsListViewWidget(itemNews: itemNews);
+              var itemNews = widget.itemNews[index];
+              return HomeNewsListItemWidget(itemNews: itemNews);
                           },
                         ),
             )

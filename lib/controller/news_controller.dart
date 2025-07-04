@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
-import 'package:news_app_ebs/view/view_models.dart';
+
+import '../views/view_models.dart';
+
 
 class NewsController extends GetxController {
   RxList<NewsViewModel> news = RxList([]);
@@ -102,7 +104,7 @@ class NewsController extends GetxController {
           'Trump criticized Biden’s handling of key issues such as the economy, '
               'immigration, foreign policy, and the COVID-19 pandemic. He accused the current administration '
               'of weak leadership and failing to protect American interests both at home and abroad. '
-              'These comments resonated strongly with his core supporters, who view Trump as '
+              'These comments resonated strongly with his core supporters, who views Trump as '
               'a champion of conservative values and economic prosperity.',
 
           'Political analysts have been quick to analyze the potential impact of Trump’s '

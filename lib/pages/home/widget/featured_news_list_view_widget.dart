@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:news_app_ebs/theme/app_colors.dart';
 import 'package:news_app_ebs/theme/app_text_style.dart';
 import 'package:readmore/readmore.dart';
-import '../../view/view_models.dart';
+import '../../../views/view_models.dart';
+import '../../detail_page/detail_page.dart';
 
 class FeaturedNewsViewWidget extends StatefulWidget {
   const FeaturedNewsViewWidget({super.key, required this.itemNews});
@@ -20,7 +21,9 @@ class _FeaturedNewsViewWidgetState extends State<FeaturedNewsViewWidget> {
       focusColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(newsItem: widget.itemNews)));
+      },
       child: Padding(
         padding: const EdgeInsets.only(right: 20.0),
         child: Container(
@@ -60,14 +63,19 @@ class _FeaturedNewsViewWidgetState extends State<FeaturedNewsViewWidget> {
                     Align(
                       alignment: Alignment.bottomLeft,
                       heightFactor: 1.15,
-                        child: TextButton(
-                          onPressed: () {},
-                          style: TextButton.styleFrom(
-                            backgroundColor: AppColors.secondary,
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                          ),
-                          child: Text('Read Now', style: AppTextStyles.secondaryButton),
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => DetailPage(newsItem: widget.itemNews)),
+                          );
+                        },
+                        style: TextButton.styleFrom(
+                          backgroundColor: AppColors.secondary,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
                         ),
+                        child: Text('Read Now', style: AppTextStyles.secondaryButton),
+                      ),
                     ),
                   ],
                 ),

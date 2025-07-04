@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../view/view_models.dart';
-import '../detail_page/detail_page.dart';
+import '../../../views/view_models.dart';
+import '../../detail_page/detail_page.dart';
 import 'featured_news_list_view_widget.dart';
 import 'header_title_widget.dart';
 
@@ -20,15 +20,7 @@ class _FeaturedNewsListWidgetState extends State<FeaturedNewsListWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         HeaderTitleWidget(titleKey: 'Featured', seeAll: () {}),
-
-        InkWell(
-          /*focusColor: Colors.transparent,
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (_)=>DetailPage(newsItem: widget.news)));
-          },*/
-          child: Container(
+        Container(
             height: 250,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
             child: widget.news.isNotEmpty
@@ -48,7 +40,6 @@ class _FeaturedNewsListWidgetState extends State<FeaturedNewsListWidget> {
                     child: Text('at the moment there are no news to show'),
                   ),
           ),
-        ),
       ],
     );
   }

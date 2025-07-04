@@ -41,10 +41,10 @@ flutter:
     - assets/icons/dailymail.png
     - assets/icons/time.png
     - assets/icons/usatoday.png
-    - assets/icons/like.png
-    - assets/icons/comments.png
-    - assets/icons/bookmark.png
-    - assets/icons/bookmark_filles.png
+    - assets/icons/like.svg
+    - assets/icons/comments.svg
+    - assets/icons/bookmark.svg
+    - assets/icons/bookmark-filled.svg
 
   fonts:
     - family: SourceSans3

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app_ebs/view/view_models.dart';
 
-import '../../theme/app_text_style.dart';
+
+import '../../../theme/app_text_style.dart';
+import '../../../views/view_models.dart';
 import 'news_publisher_row_widget.dart';
-import 'news_stats_scetion_widget.dart';
+import 'news_stats_section_widget.dart';
 
 class NewsTextSectionWidget extends StatelessWidget {
   const NewsTextSectionWidget({super.key, required this.itemNews});
