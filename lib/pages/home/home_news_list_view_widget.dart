@@ -32,16 +32,16 @@ class _HomeNewsListViewWidgetState extends State<HomeNewsListViewWidget> {
             border: Border.all(width: 1, color: Colors.grey.shade300),
             borderRadius: BorderRadius.circular(18),
           ),
-          /*height: 156,
-          width: 358,*/
+          height: 156,
+          width: 358,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               NewsImageSectionWidget(imageUrl: widget.itemNews.imageUrl),
               NewsTextSectionWidget(itemNews: widget.itemNews),
             ],
-
           ),
+
         ),
       ),
     );

@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
             children: [
 
               Obx(() => FeaturedNewsListWidget(news: newsController.news.value)),
-
               HomeNewsListWidget(news: newsController.news.value),
 
             ],
