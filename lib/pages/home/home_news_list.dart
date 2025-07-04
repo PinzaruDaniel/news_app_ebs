@@ -21,6 +21,7 @@ class _HomeNewsListWidgetState extends State<HomeNewsListWidget> {
   Widget build(BuildContext context) {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
           padding: const EdgeInsets.only(top: 24.0),
@@ -30,16 +31,18 @@ class _HomeNewsListWidgetState extends State<HomeNewsListWidget> {
 
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
           child: widget.news.isNotEmpty
-              ? ListView.builder(
-            padding: EdgeInsets.only(left: 16),
-            shrinkWrap: true,
-            scrollDirection: Axis.vertical,
-            itemCount: widget.news.length,
-            itemBuilder: (context, index) {
-              var itemNews = widget.news[index];
-              return HomeNewsListViewWidget(itemNews: itemNews);
-            },
-          )
+              ? Expanded(
+                child: ListView.builder(
+                            padding: EdgeInsets.symmetric(horizontal: 16),
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            itemCount: widget.news.length,
+                            itemBuilder: (context, index) {
+                var itemNews = widget.news[index];
+                return HomeNewsListViewWidget(itemNews: itemNews);
+                            },
+                          ),
+              )
               : Container(
             height: 250,
             width: 150,

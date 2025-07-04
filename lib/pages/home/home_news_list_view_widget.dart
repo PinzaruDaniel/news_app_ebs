@@ -18,30 +18,21 @@ class _HomeNewsListViewWidgetState extends State<HomeNewsListViewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 16.0, right: 16),
-      child: InkWell(
-        focusColor: Colors.transparent,
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        onTap: () {
-          Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(newsItem: widget.itemNews)));
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border.all(width: 1, color: Colors.grey.shade300),
-            borderRadius: BorderRadius.circular(18),
-          ),
-          height: 156,
-          width: 358,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              NewsImageSectionWidget(imageUrl: widget.itemNews.imageUrl),
-              NewsTextSectionWidget(itemNews: widget.itemNews),
-            ],
-          ),
+    return InkWell(
 
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 8),
+        decoration: BoxDecoration(
+          border: Border.all(width: 1, color: Colors.grey.shade300),
+          borderRadius: BorderRadius.circular(18),
+        ),
+
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            NewsImageSectionWidget(imageUrl: widget.itemNews.imageUrl),
+            Expanded(child: NewsTextSectionWidget(itemNews: widget.itemNews)),
+          ],
         ),
       ),
     );

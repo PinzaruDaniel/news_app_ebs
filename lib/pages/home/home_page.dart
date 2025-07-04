@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
+          
               Obx(() => FeaturedNewsListWidget(news: newsController.news.value)),
               HomeNewsListWidget(news: newsController.news.value),
 
