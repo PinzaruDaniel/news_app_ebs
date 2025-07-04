@@ -45,6 +45,7 @@ flutter:
     - assets/icons/comments.svg
     - assets/icons/bookmark.svg
     - assets/icons/bookmark-filled.svg
+    - assets/icons/views.svg
 
   fonts:
     - family: SourceSans3

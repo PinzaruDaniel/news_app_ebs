@@ -18,11 +18,12 @@ class _NewsStatsSectionWidgetState extends State<NewsStatsSectionWidget> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset('assets/icons/like.svg', width: 16,height: 16,),
+        SvgPicture.asset('assets/icons/like.svg', width: 12, height: 12),
         SizedBox(width: 4),
         Text(widget.itemNews.likes, style: AppTextStyles.bold.copyWith(fontSize: 10)),
         SizedBox(width: 16),
-        SvgPicture.asset('assets/icons/comments.svg', width: 16,height: 16,),
+        SvgPicture.asset('assets/icons/comments.svg', width: 12, height: 12),
+        SizedBox(width: 4),
         Text(widget.itemNews.comments, style: AppTextStyles.bold.copyWith(fontSize: 10)),
        //Spacer(),
         Expanded(child: Container(),),
