@@ -26,15 +26,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-          
-              Obx(() => FeaturedNewsListWidget(news: newsController.news.value)),
-              HomeNewsListWidget(news: newsController.news.value),
+        child: Column(
+          children: [
 
-            ],
-          ),
+            Obx(() => FeaturedNewsListWidget(news: newsController.news.value)),
+            Expanded(child: HomeNewsListWidget(news: newsController.news.value)),
+
+          ],
         ),
       ),
     );

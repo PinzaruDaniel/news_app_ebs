@@ -23,7 +23,7 @@ class _NewsStatsSectionWidgetState extends State<NewsStatsSectionWidget> {
         SizedBox(width: 16),
         Image(image: AssetImage('assets/icons/comments.png'), width: 16, height: 16),
         Text(widget.itemNews.comments, style: AppTextStyles.bold.copyWith(fontSize: 10)),
-
+        Spacer(),
         InkWell(
           focusColor: Colors.transparent,
           splashColor: Colors.transparent,
@@ -33,10 +33,13 @@ class _NewsStatsSectionWidgetState extends State<NewsStatsSectionWidget> {
               isBookmarked = !isBookmarked;
             });
           },
-          child: Image.asset(
-            isBookmarked ? 'assets/icons/bookmark_filles.png' : 'assets/icons/bookmark.png',
-            width: 16,
-            height: 16,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset(
+              isBookmarked ? 'assets/icons/bookmark_filles.png' : 'assets/icons/bookmark.png',
+              width: 16,
+              height: 16,
+            ),
           ),
         ),
       ],
