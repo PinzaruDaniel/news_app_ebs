@@ -20,7 +20,7 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
@@ -39,33 +39,34 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
             padding: const EdgeInsets.only(top: 16.0),
             child: Text(widget.itemNews.title, style: AppTextStyles.bold),
           ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 16.0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(width: 1, color: AppColors.primary),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-                    padding: EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-                    minimumSize: Size(4, 5),
+          Padding(
+            padding: const EdgeInsets.only(top:12.0, bottom:8),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(color: AppColors.primary, width: 1)
+                    ),
+                    child: Text(widget.itemNews.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10)),
                   ),
-                  child: Text(widget.itemNews.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10)),
                 ),
-              ),
-              SvgPicture.asset('assets/icons/views.svg', width: 12, height: 12),
-              SizedBox(width: 4),
-              Text(widget.itemNews.views, style: AppTextStyles.bold.copyWith(fontSize: 10)),
-              SizedBox(width: 16),
-              SvgPicture.asset('assets/icons/like.svg', width: 12, height: 12),
-              SizedBox(width: 4),
-              Text(widget.itemNews.likes, style: AppTextStyles.bold.copyWith(fontSize: 10)),
-              SizedBox(width: 16),
-              SvgPicture.asset('assets/icons/comments.svg', width: 12, height: 12),
-              SizedBox(width: 4),
-              Text(widget.itemNews.comments, style: AppTextStyles.bold.copyWith(fontSize: 10)),
-            ],
+                SvgPicture.asset('assets/icons/views.svg', width: 12, height: 12),
+                SizedBox(width: 4),
+                Text(widget.itemNews.views, style: AppTextStyles.bold.copyWith(fontSize: 10)),
+                SizedBox(width: 16),
+                SvgPicture.asset('assets/icons/like.svg', width: 12, height: 12),
+                SizedBox(width: 4),
+                Text(widget.itemNews.likes, style: AppTextStyles.bold.copyWith(fontSize: 10)),
+                SizedBox(width: 16),
+                SvgPicture.asset('assets/icons/comments.svg', width: 12, height: 12),
+                SizedBox(width: 4),
+                Text(widget.itemNews.comments, style: AppTextStyles.bold.copyWith(fontSize: 10)),
+              ],
+            ),
           ),
 
           Row(
@@ -106,9 +107,7 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
           ),
 
           Wrap(
-            //crossAxisAlignment: WrapCrossAlignment.start,
-            //spacing:0,
-            //runSpacing: 0,
+            spacing:8,
             children: widget.itemNews.hashtags.map((tag) {
               return TextButton(
                 style: TextButton.styleFrom(
