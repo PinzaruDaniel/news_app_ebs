@@ -35,6 +35,8 @@ flutter:
     - assets/newsimage/medicines.png
     - assets/newsimage/robot.png
     - assets/newsimage/trump.png
+    - assets/newsimage/caras.jpg
+    - assets/icons/tv8.jpeg
     - assets/icons/bbc.png
     - assets/icons/cnet.png
     - assets/icons/cnn.png

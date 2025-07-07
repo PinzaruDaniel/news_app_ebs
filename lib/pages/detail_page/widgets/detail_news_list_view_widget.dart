@@ -21,7 +21,7 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
       padding: const EdgeInsets.all(16.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.all(Radius.circular(24)),
@@ -36,7 +36,7 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 8, top: 16.0),
+            padding: const EdgeInsets.only(top: 16.0),
             child: Text(widget.itemNews.title, style: AppTextStyles.bold),
           ),
           Row(
@@ -70,12 +70,55 @@ class _DetailNewsListViewWidgetState extends State<DetailNewsListViewWidget> {
 
           Row(
             children: [
-              Image.asset(widget.itemNews.publisherIcon, width: 32, height: 32),
+              Image.asset(widget.itemNews.publisherIcon, width: 32, height: 32, fit: BoxFit.cover),
               SizedBox(width: 4),
               Text(widget.itemNews.publisher, style: AppTextStyles.primaryButton.copyWith(fontSize: 14)),
               SizedBox(width: 12),
               Spacer(),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: AppColors.primary,
+                  fixedSize: Size(85, 32),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(24),
+                    side: BorderSide(color: Colors.transparent),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(Icons.add, color: Colors.white, size: 16),
+                    Text('Follow', style: AppTextStyles.secondaryButton),
+                  ],
+                ),
+              ),
             ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: widget.itemNews.description.map((paragraph) {
+              return Padding(
+                padding: EdgeInsets.only(top: 12, bottom: 12),
+                child: Text(paragraph, style: AppTextStyles.medium.copyWith(fontSize: 12)),
+              );
+            }).toList(),
+          ),
+
+          Wrap(
+            //crossAxisAlignment: WrapCrossAlignment.start,
+            //spacing:0,
+            //runSpacing: 0,
+            children: widget.itemNews.hashtags.map((tag) {
+              return TextButton(
+                style: TextButton.styleFrom(
+                  side: const BorderSide(width: 1, color: AppColors.primary),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+                ),
+                onPressed: () {},
+                child: Text('#$tag', style: AppTextStyles.primaryButton.copyWith(fontSize: 14)),
+              );
+            }).toList(),
           ),
         ],
       ),

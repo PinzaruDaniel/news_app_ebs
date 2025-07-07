@@ -266,6 +266,38 @@ class NewsController extends GetxController {
         ],
         hashtags: ['technology', 'robots', 'japan', 'innovation', 'AI', 'automation', 'future'],
       ),
+
+      NewsViewModel(
+        title: 'Victor Muntean, alias „Caras”, susține că a devenit campion mondial la powerlifting',
+        imageUrl: 'assets/newsimage/caras.jpg',
+        publisher: 'TV8 Moldova',
+        publisherIcon: 'assets/icons/tv8.jpeg',
+        topic: 'Sport',
+        views: '148.3k',
+        likes: '87.2k',
+        comments: '29.6k',
+        description: [
+          'Victor Muntean, cunoscut în mediul online ca „Caras”, a declarat că a obținut 9 medalii de aur, '
+              'Cupa Absolută și două recorduri mondiale la o competiție internațională de powerlifting desfășurată în Rusia. '
+              'Evenimentul a avut loc în Sankt Petersburg și a fost organizat de World Raw Powerlifting Federation (WRPF).',
+
+          'Caras a publicat imagini și videoclipuri de la competiție pe TikTok, unde are o audiență semnificativă. '
+              'Susține că performanțele sale îl clasează printre cei mai buni sportivi moldoveni din domeniu.',
+
+          'Totuși, autoritățile din Republica Moldova au reacționat rapid. Ministerul Educației și Cercetării a menționat că '
+              'Muntean nu face parte din lotul național, nu a fost delegat oficial și că participarea lui reprezintă un act unilateral, '
+              'neautorizat. Competiția în cauză nu este recunoscută de federațiile internaționale legitime, cum ar fi IPF.',
+
+          'Analizele jurnalistice arată că în mai multe categorii în care a concurat Muntean, nu a avut adversari direcți, '
+              'ceea ce ridică semne de întrebare asupra validității titlurilor obținute. De asemenea, experți acuză o posibilă manipulare mediatică '
+              'având scopuri propagandistice, într-un context geopolitic sensibil pentru Moldova.',
+
+          'În ciuda controversei, Victor Muntean rămâne o figură virală pe TikTok și continuă să susțină că este un campion mondial legitim. '
+              'Situația a generat dezbateri intense în spațiul public, despre ce înseamnă recunoaștere oficială în sport și cum sunt exploatate simbolurile naționale în mediul digital.',
+        ],
+        hashtags: ['sport', 'caras', 'powerlifting', 'moldova', 'tiktok', 'controversal', 'campion'],
+      ),
+
     ];
   }
 }

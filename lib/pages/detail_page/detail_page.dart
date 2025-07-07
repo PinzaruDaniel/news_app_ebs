@@ -18,7 +18,11 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: Colors.white,
+        shadowColor: Colors.transparent,
         leading: IconButton(
           onPressed: (){Get.back();},
           icon: const Icon(

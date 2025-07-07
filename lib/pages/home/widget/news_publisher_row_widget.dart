@@ -13,7 +13,9 @@ class NewsPublisherRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(newsItem.publisherIcon, width: 16, height: 16),
+        ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(24)),
+            child: Image.asset(newsItem.publisherIcon, width: 16, height: 16, fit: BoxFit.cover,)),
         SizedBox(width: 4),
         Text(newsItem.publisher, style: AppTextStyles.bold.copyWith(fontSize: 10)),
         SizedBox(width: 12),
@@ -25,9 +27,8 @@ class NewsPublisherRowWidget extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 7, vertical: 3),
             minimumSize: Size(4, 5),
           ),
-          child: Text(newsItem.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10),),
+          child: Text(newsItem.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10)),
         ),
-
       ],
     );
   }
