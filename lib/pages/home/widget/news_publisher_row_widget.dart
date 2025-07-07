@@ -11,25 +11,26 @@ class NewsPublisherRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(24)),
-            child: Image.asset(newsItem.publisherIcon, width: 16, height: 16, fit: BoxFit.cover,)),
-        SizedBox(width: 4),
-        Text(newsItem.publisher, style: AppTextStyles.bold.copyWith(fontSize: 10)),
-        SizedBox(width: 12),
-        OutlinedButton(
-          onPressed: () {},
-          style: OutlinedButton.styleFrom(
-            side: const BorderSide(width: 1, color: AppColors.primary),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-            padding: EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-            minimumSize: Size(4, 5),
+    return Padding(
+      padding: const EdgeInsets.only(top: 12,bottom: 12.0),
+      child: Row(
+        children: [
+          ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(24)),
+              child: Image.asset(newsItem.publisherIcon, width: 16, height: 16, fit: BoxFit.cover,)),
+          SizedBox(width: 4),
+          Text(newsItem.publisher, style: AppTextStyles.bold.copyWith(fontSize: 10)),
+          SizedBox(width: 12),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(color: AppColors.primary, width: 1)
+            ),
+            child: Text(newsItem.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10)),
           ),
-          child: Text(newsItem.topic, style: AppTextStyles.primaryButton.copyWith(fontSize: 10)),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
