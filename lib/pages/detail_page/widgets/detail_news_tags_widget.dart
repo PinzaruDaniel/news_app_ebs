@@ -12,13 +12,16 @@ class DetailNewsTagsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       spacing: 8,
+      runSpacing: 8,
       children: itemNews.hashtags.map((tag) {
-        return TextButton(
-          style: TextButton.styleFrom(
-            side: const BorderSide(width: 1, color: AppColors.primary),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+
+        //in container
+        return Container(
+          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(color: AppColors.primary, width: 1)
           ),
-          onPressed: () {},
           child: Text('#$tag', style: AppTextStyles.primaryButton.copyWith(fontSize: 14)),
         );
       }).toList(),

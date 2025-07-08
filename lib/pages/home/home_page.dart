@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:news_app_ebs/controller/news_controller.dart';
+import 'package:news_app_ebs/pages/home/home_controller.dart';
 
 import 'widget/featured_news_list_widget.dart';
 import 'widget/home_news_list_view_widget.dart';

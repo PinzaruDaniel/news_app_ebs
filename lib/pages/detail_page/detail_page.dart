@@ -36,7 +36,7 @@ class _DetailPageState extends State<DetailPage> {
             child: SingleChildScrollView(
                 child: Column(
                 children: [
-                  DetailNewsListViewWidget(itemNews: widget.newsItem),
+                  DetailNewsListViewWidget(item: widget.newsItem),
                 ],
                 ),
             )

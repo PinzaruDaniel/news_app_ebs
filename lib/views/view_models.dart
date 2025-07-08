@@ -7,7 +7,7 @@ class NewsViewModel{
   final String views;
   final String likes;
   final String comments;
-  final List<String> description;
+  final String description;
   final List<String> hashtags;
 
   NewsViewModel({
